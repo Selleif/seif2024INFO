@@ -1,3 +1,4 @@
+//Abdelhalim Seif Eldin 4^H
 #include <stdio.h>
 
 int main() {
@@ -13,7 +14,6 @@ int main() {
     }
 
     while(!feof(testo)){
-        ch = fgetc(testo);
         if(ch != EOF){
             printf("%c", ch);
         }
