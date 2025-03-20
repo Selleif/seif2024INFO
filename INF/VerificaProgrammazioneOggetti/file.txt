@@ -1,0 +1,30 @@
+In C++, la parola chiave const è utilizzata per dichiarare che un determinato valore o parametro non può essere modificato dopo la sua inizializzazione. È spesso usata per garantire che le variabili, i parametri di una funzione, o i metodi non vengano modificati accidentalmente.
+
+Nel contesto del tuo codice, vediamo l'uso di const in due situazioni principali:
+
+Nei metodi della classe, ad esempio:
+
+cpp
+Copia
+int getMatricola() const;
+std::string getCognome() const;
+Quando const è aggiunto alla dichiarazione di un metodo, significa che questo metodo non modificherà lo stato dell'oggetto. In altre parole, non cambierà i dati membri (variabili) della classe. Questo è utile per garantire che un oggetto non venga alterato in un metodo che dovrebbe solo "leggere" i suoi valori, senza modificarli. Si tratta di una pratica che migliora la sicurezza del codice, rendendo chiaro che il metodo non è intenzionato a modificare lo stato dell'oggetto.
+
+Ad esempio, nel caso di getMatricola() const, il metodo può essere usato su oggetti costanti senza problemi, perché si garantisce che non avvenga alcuna modifica.
+
+Nei parametri dei metodi, ad esempio:
+
+cpp
+Copia
+void setMatricola(int matricola) const;
+Se un parametro è dichiarato come const, significa che non può essere modificato all'interno della funzione. Ad esempio:
+
+cpp
+Copia
+void setCognome(std::string cognome) const;
+Qui, se fosse presente un parametro cognome dichiarato const, la funzione non potrebbe modificare il parametro. Questo aiuta a evitare modifiche involontarie su variabili o parametri che non dovrebbero essere alterati.
+
+In generale, l'uso di const migliora la leggibilità e la sicurezza del codice, impedendo modifiche accidentali e rendendo chiaro che una funzione o metodo non intende cambiare lo stato degli oggetti o variabili.
+
+
+
